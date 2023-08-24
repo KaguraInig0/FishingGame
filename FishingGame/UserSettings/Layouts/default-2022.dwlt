@@ -577,9 +577,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 1c590000
-      m_LastClickedID: 22812
-      m_ExpandedIDs: 2cfbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1026,7 +1026,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 9.884888
     speed: 2
-    m_Value: 9.459223
+    m_Value: 9.884888
   m_Ortho:
     m_Target: 0
     speed: 2

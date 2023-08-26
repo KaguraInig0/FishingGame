@@ -5,6 +5,9 @@ using UnityEngine;
 public class InteractableObject : MonoBehaviour
 {
     
+    public  Vector3 mousePos;
+    public  Vector3 worldPos;
+
     private bool isMouseOver = false;
     
     public int tensionValue = 0;
@@ -19,16 +22,22 @@ public class InteractableObject : MonoBehaviour
         isMouseOver = false;
     }
 
-    public void ClickAndDrag()
+    public void  ClickAndDrag()
     {
         if (isMouseOver)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
             {
                 Debug.Log("Clicky!");
+                mousePos = Input.mousePosition;
+                mousePos.z = Camera.main.nearClipPlane + 7;
+
+                worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+
+                transform.position = worldPos;
             }
 
-            else if (Input.GetMouseButtonUp(0))
+            else 
             {
                 Debug.Log("Unclicky!");
             }
@@ -38,7 +47,7 @@ public class InteractableObject : MonoBehaviour
  
     void Update()
     {
-        ClickAndDrag();
+       ClickAndDrag();
     }
 }
 

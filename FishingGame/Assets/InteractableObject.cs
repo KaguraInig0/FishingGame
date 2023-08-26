@@ -30,7 +30,7 @@ public class InteractableObject : MonoBehaviour
             {
                 Debug.Log("Clicky!");
                 mousePos = Input.mousePosition;
-                mousePos.z = Camera.main.nearClipPlane + 7;
+                mousePos.z = Camera.main.nearClipPlane + 19;
 
                 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
 
